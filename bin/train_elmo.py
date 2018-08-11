@@ -72,3 +72,10 @@ if __name__ == '__main__':
     args = parser.parse_args()
     main(args)
 
+
+# export PYTHONPATH=.
+# export CUDA_VISIBLE_DEVICES=0,1,2
+# python3 bin/train_elmo.py \
+#     --train_prefix='/Users/tianlezhang/Documents/GitHub/bilm-tf/data/training_data/*' \
+#     --vocab_file /Users/tianlezhang/Documents/GitHub/bilm-tf/data/vocab.txt \
+#     --save_dir /Users/tianlezhang/Documents/GitHub/bilm-tf/data/out
