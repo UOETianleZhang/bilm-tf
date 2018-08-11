@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e0aee1e9-794e-427c-9285-162e4e1e3449" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/train_elmo.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/train_elmo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/out/events.out.tfevents.1534011707.TianledeMacBook-Pro.local" beforeDir="false" afterPath="$PROJECT_DIR$/data/out/events.out.tfevents.1534011707.TianledeMacBook-Pro.local" afterDir="false" />
-    </list>
+    <list default="true" id="e0aee1e9-794e-427c-9285-162e4e1e3449" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,7 +32,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="train_elmo.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="train_elmo.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/train_elmo.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-737">
@@ -45,6 +41,13 @@
                 <element signature="e#1#16#0" expanded="true" />
               </folding>
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="vocab.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/data/vocab.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-138705" />
           </provider>
         </entry>
       </file>
@@ -90,12 +93,7 @@
             <path>
               <item name="bilm-tf" type="b2602c69:ProjectViewProjectNode" />
               <item name="bilm-tf" type="462c0819:PsiDirectoryNode" />
-              <item name="bilm" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bilm-tf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bilm-tf" type="462c0819:PsiDirectoryNode" />
-              <item name="bin" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -165,7 +163,7 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.17054264" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.17054264" />
       <window_info anchor="bottom" id="TODO" order="10" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.32969698" />
@@ -173,7 +171,7 @@
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.32969698" />
       <window_info anchor="bottom" id="Python Console" order="0" weight="0.32969698" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.34181818" />
+      <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.34181818" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -219,9 +217,6 @@
     <entry file="file://$PROJECT_DIR$/data/out/options.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/vocab.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3/typing.pyi">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1" />
@@ -252,6 +247,11 @@
             <element signature="e#1#16#0" expanded="true" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/vocab.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-138705" />
       </provider>
     </entry>
   </component>
