@@ -1,6 +1,6 @@
 
 import argparse
-
+import os
 import numpy as np
 
 from bilm.training import train, load_options_latest_checkpoint, load_vocab
@@ -64,6 +64,8 @@ def main(args):
 
 
 if __name__ == '__main__':
+    os.environ["CUDA_VISIBLE_DEVICES"] = "0,1,2"
+
     parser = argparse.ArgumentParser()
     parser.add_argument('--save_dir', help='Location of checkpoint files')
     parser.add_argument('--vocab_file', help='Vocabulary file')
@@ -72,10 +74,12 @@ if __name__ == '__main__':
     args = parser.parse_args()
     main(args)
 
-
+# pip3 install tensorflow-gpu==1.2 h5py
+# python3 setup.py install
+# cd /disk/scratch1/yangl/tianle/ELMo/bilm-tf
 # export PYTHONPATH=.
 # export CUDA_VISIBLE_DEVICES=0,1,2
 # python3 bin/train_elmo.py \
-#     --train_prefix='/Users/tianlezhang/Documents/GitHub/bilm-tf/data/training_data/*' \
-#     --vocab_file /Users/tianlezhang/Documents/GitHub/bilm-tf/data/vocab.txt \
-#     --save_dir /Users/tianlezhang/Documents/GitHub/bilm-tf/data/out
+#     --train_prefix='/disk/scratch1/yangl/tianle/ELMo/bilm-tf/data/training_data/*' \
+#     --vocab_file /disk/scratch1/yangl/tianle/ELMo/bilm-tf/data/vocab.txt \
+#     --save_dir /disk/scratch1/yangl/tianle/ELMo/bilm-tf/data/out
