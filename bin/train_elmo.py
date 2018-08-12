@@ -13,8 +13,8 @@ def main(args):
 
     # define the options
     batch_size = 128  # batch size for each GPU
-    # n_gpus = 3
-    n_gpus = 1
+    n_gpus = 3
+    # n_gpus = 1
 
     # number of tokens in training data (this for 1B Word Benchmark)
     # n_train_tokens = 768648884
@@ -67,8 +67,8 @@ def main(args):
 
 
 if __name__ == '__main__':
-    # os.environ["CUDA_VISIBLE_DEVICES"] = "0,1,2"
-    os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+    os.environ["CUDA_VISIBLE_DEVICES"] = "0,1,2"
+    # os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
     parser = argparse.ArgumentParser()
     parser.add_argument('--save_dir', help='Location of checkpoint files')
