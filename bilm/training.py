@@ -10,7 +10,7 @@ import re
 import tensorflow as tf
 import numpy as np
 
-from tensorflow.python.ops.init_ops import glorot_uniform_initializer
+# from tensorflow.python.ops.init_ops import glorot_uniform_initializer
 
 from .data import Vocabulary, UnicodeCharsVocabulary, InvalidNumberOfCharacters
 
@@ -785,6 +785,7 @@ def train(options, data, n_gpus, tf_save_dir, tf_log_dir,
         batch_size = options['batch_size']
         unroll_steps = options['unroll_steps']
         n_train_tokens = options.get('n_train_tokens', 768648884)
+        print("***n_train_tokens: %d***" % n_train_tokens)
         n_tokens_per_batch = batch_size * unroll_steps * n_gpus
         n_batches_per_epoch = int(n_train_tokens / n_tokens_per_batch)
         n_batches_total = options['n_epochs'] * n_batches_per_epoch
@@ -880,7 +881,7 @@ def train(options, data, n_gpus, tf_save_dir, tf_log_dir,
 
             if batch_no % 1250 == 0:
                 summary_writer.add_summary(ret[3], batch_no)
-            if batch_no % 100 == 0:
+            if batch_no % 1 == 0:
                 # write the summaries to tensorboard and display perplexity
                 summary_writer.add_summary(ret[1], batch_no)
                 print("Batch %s, train_perplexity=%s" % (batch_no, ret[2]))
