@@ -54,7 +54,7 @@ def main(args):
      'batch_size': batch_size,
      'n_tokens_vocab': vocab.size,
      'unroll_steps': 20,
-     'n_negative_samples_batch': 8192,
+     'n_negative_samples_batch': 2048,
     }
 
     prefix = args.train_prefix
@@ -85,6 +85,11 @@ if __name__ == '__main__':
 # export PYTHONPATH=.
 # export CUDA_VISIBLE_DEVICES=0,1,2
 # python3 bin/train_elmo.py \
-#     --train_prefix='/Users/tianlezhang/Documents/GitHub/bilm-tf/data/training_data/*' \
+#     --train_prefix='/Users/tianlezhang/Documents/GitHub/bilm-tf/data/out/*' \
 #     --vocab_file /Users/tianlezhang/Documents/GitHub/bilm-tf/data/vocab.txt \
 #     --save_dir /Users/tianlezhang/Documents/GitHub/bilm-tf/data/out
+
+# python3 bin/train_elmo.py \
+#     --train_prefix='/disk/scratch1/yangl/tianle/ELMo/training_data/*' \
+#     --vocab_file /disk/scratch1/yangl/tianle/ELMo/bilm-tf/data/vocab.txt \
+#     --save_dir /disk/scratch1/yangl/tianle/ELMo/bilm-tf/data/out

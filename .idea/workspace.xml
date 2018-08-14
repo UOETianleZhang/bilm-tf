@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e0aee1e9-794e-427c-9285-162e4e1e3449" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/train_elmo.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/train_elmo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/vocab.txt" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,8 +18,8 @@
       <file leaf-file-name="training.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bilm/training.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="11505">
-              <caret line="777" column="21" selection-start-line="777" selection-start-column="16" selection-end-line="777" selection-end-column="21" />
+            <state relative-caret-position="7540">
+              <caret line="504" column="63" selection-start-line="504" selection-start-column="49" selection-end-line="504" selection-end-column="63" />
               <folding>
                 <element signature="e#55#64#0" expanded="true" />
               </folding>
@@ -39,14 +41,16 @@
       </file>
       <file leaf-file-name="run_test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/run_test.py">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-59" />
+          </provider>
         </entry>
       </file>
       <file leaf-file-name="data.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bilm/data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5850">
-              <caret line="390" selection-start-line="390" selection-end-line="390" />
+            <state relative-caret-position="566">
+              <caret line="321" column="34" selection-start-line="321" selection-start-column="23" selection-end-line="321" selection-end-column="34" />
               <folding>
                 <element signature="e#77#88#0" expanded="true" />
               </folding>
@@ -54,11 +58,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="elmo.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bilm/elmo.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
       <file leaf-file-name="train_elmo.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/train_elmo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="858">
-              <caret line="65" column="37" selection-start-line="65" selection-start-column="37" selection-end-line="65" selection-end-column="37" />
+            <state relative-caret-position="589">
+              <caret line="60" column="25" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="25" />
               <folding>
                 <element signature="e#1#16#0" expanded="true" />
               </folding>
@@ -66,12 +75,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="useless" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/data/training_data/useless">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file leaf-file-name="count_vocab_file.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/count_vocab_file.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="413">
+              <caret line="52" column="14" lean-forward="true" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="14" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_training.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tests/test_training.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="27" column="45" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -90,6 +122,7 @@
         <option value="$PROJECT_DIR$/bilm/data.py" />
         <option value="$PROJECT_DIR$/bilm/training.py" />
         <option value="$PROJECT_DIR$/bin/train_elmo.py" />
+        <option value="$PROJECT_DIR$/count_vocab_file.py" />
       </list>
     </option>
   </component>
@@ -128,12 +161,6 @@
               <item name="bilm-tf" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="bilm-tf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bilm-tf" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="training_data" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -144,9 +171,14 @@
     <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/data" />
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/data/training_data" />
+      <recent name="$PROJECT_DIR$/data/out" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/data/out" />
+      <recent name="$PROJECT_DIR$/data/training_data" />
+      <recent name="$PROJECT_DIR$/data" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -202,17 +234,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.17054264" />
       <window_info anchor="bottom" id="TODO" order="10" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.32969698" />
       <window_info anchor="bottom" id="Run" order="6" weight="0.32969698" />
-      <window_info anchor="bottom" id="Version Control" order="3" visible="true" weight="0.32969698" />
+      <window_info anchor="bottom" id="Version Control" order="3" weight="0.32969698" />
       <window_info anchor="bottom" id="Python Console" order="0" weight="0.32969698" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="1" weight="0.22181818" />
+      <window_info anchor="bottom" id="Terminal" order="1" weight="0.30545455" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -268,7 +299,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/training_data/trainning0.txt">
+    <entry file="file://$PROJECT_DIR$/data/out/trainning0.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/train_elmo.py">
@@ -297,16 +328,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data/data/vocab.txt" />
-    <entry file="file://$PROJECT_DIR$/bilm/training.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11505">
-          <caret line="777" column="21" selection-start-line="777" selection-start-column="16" selection-end-line="777" selection-end-column="21" />
-          <folding>
-            <element signature="e#55#64#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SECOND">
@@ -317,12 +338,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/training_data/trainning1.txt">
+    <entry file="file://$PROJECT_DIR$/data/out/trainning1.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-14195" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/training_data/trainning2.txt">
+    <entry file="file://$PROJECT_DIR$/data/out/trainning2.txt">
       <provider selected="true" editor-type-id="LargeFileEditor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/data/test_data.txt">
@@ -330,42 +351,86 @@
         <state relative-caret-position="-14" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/run_test.py">
+    <entry file="file://$PROJECT_DIR$/data/training_data/useless">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/run_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-59" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/out/trainning0.txt">
+      <provider selected="true" editor-type-id="LargeFileEditor" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="-655" />
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/bilm-0.1-py3.5.egg/bilm/training.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-133">
+          <caret line="505" selection-start-line="505" selection-end-line="505" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bilm/elmo.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bilm/training.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7540">
+          <caret line="504" column="63" selection-start-line="504" selection-start-column="49" selection-end-line="504" selection-end-column="63" />
+          <folding>
+            <element signature="e#55#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/training_data/vocab.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-89251" />
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bilm/data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5850">
-          <caret line="390" selection-start-line="390" selection-end-line="390" />
+        <state relative-caret-position="566">
+          <caret line="321" column="34" selection-start-line="321" selection-start-column="23" selection-end-line="321" selection-end-column="34" />
           <folding>
             <element signature="e#77#88#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/vocab.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-89293" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/training_data/trainning0.txt">
-      <provider selected="true" editor-type-id="LargeFileEditor" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="-655" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/train_elmo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="858">
-          <caret line="65" column="37" selection-start-line="65" selection-start-column="37" selection-end-line="65" selection-end-column="37" />
+        <state relative-caret-position="589">
+          <caret line="60" column="25" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="25" />
           <folding>
             <element signature="e#1#16#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/training_data/useless">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/data/out/vocab10.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-515" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/count_vocab_file.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="52" column="14" lean-forward="true" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_training.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="27" column="45" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>

@@ -1,0 +1,53 @@
+import argparse
+import os
+from collections import Counter
+import nltk
+
+def main(args):
+    path = args.path
+
+    counter = Counter()
+    # path = "D:/Python34/news"  # 文件夹目录
+    files = os.listdir(path)  # 得到文件夹下的所有文件名称
+    s = []
+    for file in files:  # 遍历文件夹
+        if not os.path.isdir(file):  # 判断是否是文件夹，不是文件夹才打开
+            f = open(path + "/" + file);  # 打开文件
+            iter_f = iter(f);  # 创建迭代器
+            # str = ""
+            for line in iter_f:  # 遍历文件，一行行遍历，读取文本
+                counter.update(line.split())
+            # s.append(str)  # 每个文件的文本存到list中
+    # print(s)
+    #
+    # fo = open("/Users/tianlezhang/PycharmProjects/tf/ELMo_tf/data/tt")
+    # text = fo.read()
+    # fo.close()
+    # # text = 'I I love NLP la la la'
+
+
+    # tokens = nltk.word_tokenize(text)
+    # counter.update(tokens)
+    vocab = [word for word,_ in counter.most_common(len(counter)) if counter[word] > 0]
+    vocab.insert(0, '<S>')
+    vocab.insert(1, '</S>')
+    vocab.insert(2, '<UNK>')
+    # vocab = vocab[:10000]
+    print("vocab length:%d" % len(vocab))
+    # word_to_ix = dict(zip(vocab, range(len(vocab))))
+    fo = open(args.fo,'w')
+
+    for word in vocab:
+        fo.write(word+"\n")
+    fo.close()
+
+if __name__ == '__main__':
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--path')
+    parser.add_argument('--fo')
+    # parser.add_argument('--vocab_file', help='Vocabulary file')
+    # parser.add_argument('--train_prefix', help='Prefix for train files')
+
+    args = parser.parse_args()
+    main(args)
