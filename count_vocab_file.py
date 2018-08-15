@@ -36,12 +36,13 @@ def main(args):
         fre_sum += fre
     i = 0
     sum = 0
+    print("fre_sum:\t%d" % fre_sum)
     for _,fre in vocab_fre:
         sum += fre
         if sum >= 0.95*fre_sum:
             break
         i += 1
-    print("95% n_line:%d\t" % i)
+    print("95%% n_line:%d\t" % i)
 
     vocab.insert(0, '<S>')
     vocab.insert(1, '</S>')
@@ -59,7 +60,7 @@ def main(args):
 
     with open(args.fo+'_ref.txt','w') as fo_fre:
         for word,fre in vocab_fre:
-            fo_fre.write(word+"\t"+fre+"\n")
+            fo_fre.write(word+"\t"+str(fre)+"\n")
 
 
 if __name__ == '__main__':
