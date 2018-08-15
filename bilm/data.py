@@ -1,6 +1,7 @@
 # originally based on https://github.com/tensorflow/models/tree/master/lm_1b
 import glob
 import random
+import re
 
 import numpy as np
 
@@ -24,6 +25,11 @@ class Vocabulary(object):
         self._bos = -1
         self._eos = -1
 
+        #自己加的
+        self._num = -1
+        self._eng = -1
+        self._num_eng = -1
+
         with open(filename) as f:
             idx = 0
             for line in f:
@@ -34,6 +40,12 @@ class Vocabulary(object):
                     self._eos = idx
                 elif word_name == '<UNK>':
                     self._unk = idx
+                elif word_name == '<NUM>':
+                    self._num = idx
+                elif word_name == '<ENG>':
+                    self._eng = idx
+                elif word_name == '<NUM_ENG>':
+                    self._num_eng= idx
                 if word_name == '!!!MAXTERMID':
                     continue
 
@@ -43,9 +55,9 @@ class Vocabulary(object):
 
         # check to ensure file has special tokens
         if validate_file:
-            if self._bos == -1 or self._eos == -1 or self._unk == -1:
+            if self._bos == -1 or self._eos == -1 or self._unk == -1 or self._num == -1 or self._eng == -1 or self._num_eng == -1:
                 raise ValueError("Ensure the vocabulary file has "
-                                 "<S>, </S>, <UNK> tokens")
+                                 "<S>, </S>, <UNK> <NUM> <ENG> <NUM_ENG>tokens")
 
     @property
     def bos(self):
@@ -63,9 +75,20 @@ class Vocabulary(object):
     def size(self):
         return len(self._id_to_word)
 
+    # def word_to_id(self, word):
+    #     if word in self._word_to_id:
+    #         return self._word_to_id[word]
+    #     return self.unk
+
     def word_to_id(self, word):
         if word in self._word_to_id:
             return self._word_to_id[word]
+        elif re.search('^\d+[,\.]?\d*$', word):
+            return self._num
+        elif re.search('^\w+$', word):
+            return self._eng
+        elif re.search('^[\w\d]+$', word):
+            return self._num_eng
         return self.unk
 
     def id_to_word(self, cur_id):

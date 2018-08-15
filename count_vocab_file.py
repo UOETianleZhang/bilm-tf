@@ -17,7 +17,6 @@ def main(args):
             # str = ""
             for line in iter_f:  # 遍历文件，一行行遍历，读取文本
                 counter.update(line.split())
-            # s.append(str)  # 每个文件的文本存到list中
     # print(s)
     #
     # fo = open("/Users/tianlezhang/PycharmProjects/tf/ELMo_tf/data/tt")
@@ -29,17 +28,25 @@ def main(args):
     # tokens = nltk.word_tokenize(text)
     # counter.update(tokens)
     vocab = [word for word,_ in counter.most_common(len(counter)) if counter[word] > 0]
+    vocab_fre = [word+'\t'+str(fre) for word,fre in counter.most_common(len(counter)) if counter[word] > 0]
     vocab.insert(0, '<S>')
     vocab.insert(1, '</S>')
     vocab.insert(2, '<UNK>')
-    # vocab = vocab[:10000]
+    vocab.insert(3, '<NUM>')
+    vocab.insert(4, '<ENG>')
+    vocab.insert(5, '<NUM_ENG>')
+    vocab = vocab[:10000]
     print("vocab length:%d" % len(vocab))
     # word_to_ix = dict(zip(vocab, range(len(vocab))))
-    fo = open(args.fo,'w')
 
-    for word in vocab:
-        fo.write(word+"\n")
-    fo.close()
+    with open(args.fo+'.txt','w') as fo:
+        for word in vocab:
+            fo.write(word+"\n")
+
+    with open(args.fo+'_ref.txt','w') as fo_fre:
+        for word in vocab_fre:
+            fo_fre.write(word+"\n")
+
 
 if __name__ == '__main__':
 

@@ -67,7 +67,8 @@ class LanguageModel(object):
             raise ValueError("Sharing softmax and embedding weights requires "
                              "word input")
 
-        self.sample_softmax = options.get('sample_softmax', True)
+        # self.sample_softmax = options.get('sample_softmax', True)
+        self.sample_softmax = options.get('sample_softmax', False)
 
         self._build()
 
